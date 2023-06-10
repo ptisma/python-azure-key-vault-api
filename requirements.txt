@@ -1,2 +1,4 @@
 azure-identity==1.13.0
 azure-keyvault-secrets==4.7.0
+azure-cli==2.49.0
+azure-cli-core==2.49.0
