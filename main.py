@@ -1,10 +1,14 @@
 #!/usr/bin/env python3
 import os
+from azure.cli.core import get_default_cli
 from azure.keyvault.secrets import SecretClient
 from azure.identity import DefaultAzureCredential
 
+
 def main():
     print("STARTED")
+    get_default_cli().invoke(['login'])
+
     keyVaultName = os.environ["KEY_VAULT_NAME"]
     KVUri = f"https://{keyVaultName}.vault.azure.net"
 
